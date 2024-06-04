@@ -3,17 +3,40 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
-router.get('/', (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+
+// get all products and includes the Tag Data & Category Data
+router.get('/', async (req, res) => {
+  try {
+    const productinfo = await Product.findAll({
+      include: [
+        {model: Tag},
+        {model: Category}
+      ]
+    });
+
+    res.status(200).json(productinfo);
+  } catch (err) {
+    res.status(500).json({ message: 'Unable to find Products - Server Issue'});
+  }
 });
 
-// get one product
-router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+
+// get one product and includes the Tag Data & Category Data
+router.get('/:id', async (req, res) => {
+  try {
+    const productinfo = await Product.findByPk(req.params.id, {
+      include: [
+        {model: Tag},
+        {model: Category}
+      ]
+    });
+
+    res.status(200).json(productinfo);
+  } catch (err) {
+    res.status(500).json({ message: 'Unable to find Product by that ID - Server Issue'});
+  }
 });
+
 
 // create new product
 router.post('/', (req, res) => {
@@ -46,6 +69,7 @@ router.post('/', (req, res) => {
       res.status(400).json(err);
     });
 });
+
 
 // update product
 router.put('/:id', (req, res) => {
@@ -92,8 +116,24 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+// This will delete a Product by its ID
+router.delete('/:id', async (req, res) => {
+  try {
+    const productinfo = await Product.delete(req.body, {
+      where: {
+        id: req.params.id
+      }
+    });
+
+    if(!productinfo) {
+      res.status(404).json({ message: 'No Product was found with that ID.'})
+      return;
+    }
+
+    res.status(200).json(productinfo);
+  } catch (err) {
+    res.status(500).json({ message: 'Unable to delete Product - Server Issue'})
+  }
 });
 
 module.exports = router;
