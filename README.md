@@ -41,19 +41,23 @@ As a manager at an internet retail company, I want a back end for my e-commerce 
 
 ## Mock-Up:
 
-The following screenshot shows the application's GET routes to return all categories, all products, and all tags being tested in Postman:
+The following screenshot shows the application's GET routes to return all categories being tested in Postman:
 
-![In Postman, the user tests “GET tags,” “GET Categories,” and “GET All Products.”.](./Assets/13-orm-homework-demo-01.gif)
-
-
-The following animation shows the application's GET routes to return a single category, a single product, and a single tag being tested in Insomnia:
-
-![In Postman, the user tests “GET tag by id,” “GET Category by ID,” and “GET One Product.”](./Assets/13-orm-homework-demo-02.gif)
+![In Postman, the user tests “GET Categories”](./assets/postman-getallcats.png)
 
 
-The following animation shows the application's POST, PUT, and DELETE routes for categories being tested in Insomnia:
+The following screenshot shows the application's GET routes to return a single category being tested in Postman:
 
-![In Postman, the user tests “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.”](./Assets/13-orm-homework-demo-03.gif)
+![In Postman, the user tests “GET Category by ID”](./)
+
+
+The following screenshots shows the application's POST, PUT, and DELETE routes for categories being tested in Postman:
+
+![In Postman, the user tests “CREATE Category”](./)
+
+![In Postman, the user tests “UPDATE Category”](./)
+
+![In Postman, the user tests “DELETE Category by ID”](./)
 
 
 ## The Deployment:
@@ -63,45 +67,6 @@ The Repository: [Click Here.](https://github.com/NovaLanceBrittany/HW-12-SQL-Emp
 The Google Drive: [Click Here.](https://drive.google.com/drive/folders/1aI_xm6MjSVz5ZbHi5ZtEBc2YxGKFKRR1?usp=sharing)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Getting Started
-
-
-
-### Associations
-
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
-
-* `Product` belongs to `Category`, and `Category` has many `Product` models, as a category can have multiple products but a product can only belong to one category.
-
-* `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
-
-> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
-
-### Fill Out the API Routes to Perform RESTful CRUD Operations
-
-Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` to perform create, read, update, and delete operations using your Sequelize models.
-
-Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
-
-> **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
-
-
-### Sync Sequelize to the Database on Server Start
-
-Create the code needed in `server.js` to sync the Sequelize models to the PostgreSQL database on server start.
 
 
 
