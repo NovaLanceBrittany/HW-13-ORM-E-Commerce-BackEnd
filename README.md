@@ -48,21 +48,21 @@ The following screenshot shows the application's GET routes to return all catego
 
 The following screenshot shows the application's GET routes to return a single category being tested in Postman:
 
-![In Postman, the user tests “GET Category by ID”](./)
+![In Postman, the user tests “GET Category by ID”](./assets/catById.png)
 
 
 The following screenshots shows the application's POST, PUT, and DELETE routes for categories being tested in Postman:
 
-![In Postman, the user tests “CREATE Category”](./)
+![In Postman, the user tests “CREATE Category”](./assets/createcat.png)
 
-![In Postman, the user tests “UPDATE Category”](./)
+![In Postman, the user tests “UPDATE Category”](./assets/updatecat.png)
 
-![In Postman, the user tests “DELETE Category by ID”](./)
+![In Postman, the user tests “DELETE Category by ID”](./assets/deletecat.png)
 
 
 ## The Deployment:
 
-The Repository: [Click Here.](https://github.com/NovaLanceBrittany/HW-12-SQL-Employee-Tracker)
+The Repository: [Click Here.](https://github.com/NovaLanceBrittany/HW-13-ORM-E-Commerce-BackEnd)
 
 The Google Drive: [Click Here.](https://drive.google.com/drive/folders/1-Uq_IwsUBUY685qEZc_o2CkMHt5QHZOC?usp=sharing)
 
