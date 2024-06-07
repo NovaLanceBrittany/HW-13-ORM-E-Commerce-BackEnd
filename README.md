@@ -64,7 +64,7 @@ The following screenshots shows the application's POST, PUT, and DELETE routes f
 
 The Repository: [Click Here.](https://github.com/NovaLanceBrittany/HW-12-SQL-Employee-Tracker)
 
-The Google Drive: [Click Here.](https://drive.google.com/drive/folders/1aI_xm6MjSVz5ZbHi5ZtEBc2YxGKFKRR1?usp=sharing)
+The Google Drive: [Click Here.](https://drive.google.com/drive/folders/1-Uq_IwsUBUY685qEZc_o2CkMHt5QHZOC?usp=sharing)
 
 
 

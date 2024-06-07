@@ -71,14 +71,14 @@ router.put('/:id', async (req, res) => {
 // This will delete a Tag by its ID
 router.delete('/:id', async (req, res) => {
   try {
-    const taginfo = await Tag.delete(req.body, {
+    const taginfo = await Tag.destroy({
       where: {
         id: req.params.id
       }
     });
   
     if(!taginfo) {
-      res.status(404).josn({ message: 'No Tag was found with taht ID.'})
+      res.status(404).json({ message: 'No Tag was found with that ID.'})
       return;
     }
 
